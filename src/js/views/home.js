@@ -1,14 +1,14 @@
 import React from "react";
 import "../../styles/home.css";
-import Card from "./Cards";
-import Characters from "./Characters";
+import Card from "../component/CardCha";
+import Characters from "../component/Characters";
+import Vehicles from "../component/Vehicles";
+import Planets from "../component/Planets";
 
 export const Home = () => (
 	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<Characters/>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+		<Characters />
+		<Vehicles />
+		<Planets />
 	</div>
 );
