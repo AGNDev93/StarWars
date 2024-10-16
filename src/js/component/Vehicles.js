@@ -13,14 +13,16 @@ const Vehicles = () => {
     return (
         <div>
             <h1>Vehicles</h1>
-            <div className="d-flex flex-row overflow-x-scroll">
+            <div className="d-flex flex-row overflow-scroll">
                 {store.vehicles.map((item, index) => (
+                <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
                     <CardStart key={index}
                         image={"https://starwars-visualguide.com/assets/img/vehicles/" + (index + 1) + ".jpg"}
                         title={item.name}
                         model={item.model}
                         manufacturer={item.manufacturer}
                     />
+                </div>
                 ))}
             </div>
         </div>

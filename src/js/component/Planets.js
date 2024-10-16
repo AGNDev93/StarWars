@@ -13,14 +13,17 @@ const Planets = () => {
     return (
         <div>
             <h1>Planets</h1>
-            <div className="d-flex flex-row overflow-x-scroll">
+            <div className="d-flex flex-row overflow-scroll">
                 {store.planets.map((item, index) => (
-                    <CardPlan key={index}
-                        image={"https://starwars-visualguide.com/assets/img/planets/" + (index + 1) + ".jpg"}
-                        title={item.name}
-                        population={item.population}
-                        terrain={item.terrain}
-                    />
+                    <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
+                        <CardPlan key={index}
+                            image={index==0? "https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png":
+                                "https://starwars-visualguide.com/assets/img/planets/" + (index + 1) + ".jpg"}
+                            title={item.name}
+                            population={item.population}
+                            terrain={item.terrain}
+                        />
+                    </div>
                 ))}
             </div>
         </div>

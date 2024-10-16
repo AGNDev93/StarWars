@@ -1,3 +1,4 @@
+import { element } from "prop-types";
 
 
 const getState = ({ getStore, getActions, setStore }) => {
@@ -5,7 +6,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
-			vehicles: []
+			vehicles: [],
+			favorites: [],
+			character: {},
+			planet: {},
+			vehicle: {}
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -40,7 +45,65 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error)
 				}
-			}
+			},
+
+			addFavorite: async (title) => {
+				try {
+					if (getStore().favorites.includes(title)) {
+						let aux = []
+						aux = getStore().favorites.filter((elemento) => elemento !== title)
+						setStore({ favorites: aux })
+					}
+					else {
+						setStore({ favorites: [...getStore().favorites, title] })
+					}
+					return true
+				} catch (error) {
+					console.log(error)
+					return false
+				}
+			},
+
+			deleteFavorite: async (title) => {
+				try {
+					let aux = []
+					aux = getStore().favorites.filter((elemento) => elemento !== title)
+					setStore({ favorites: aux })
+				} catch (error) {
+					console.log(error)
+					return false
+				}
+			},
+
+			getCharacter: async (id) => {
+				try {
+					const response = await fetch("https://swapi.dev/api/people/" + id)
+					const data = await response.json()
+					setStore({ character: data })
+				} catch (error) {
+					console.log(error)
+				}
+			},
+
+			getPlanet: async (id) => {
+				try {
+					const response = await fetch("https://swapi.dev/api/planets/" + id)
+					const data = await response.json()
+					setStore({ planet: data })
+				} catch (error) {
+					console.log(error)
+				}
+			},
+
+			getVehicle: async (id) => {
+				try {
+					const response = await fetch("https://swapi.dev/api/starships/" + id)
+					const data = await response.json()
+					setStore({ vehicle: data })
+				} catch (error) {
+					console.log(error)
+				}
+			},
 		}
 	};
 };
