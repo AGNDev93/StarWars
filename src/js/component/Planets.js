@@ -17,11 +17,13 @@ const Planets = () => {
                 {store.planets.map((item, index) => (
                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
                         <CardPlan key={index}
-                            image={index==0? "https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png":
+                            image={index == 0 ? "https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" :
                                 "https://starwars-visualguide.com/assets/img/planets/" + (index + 1) + ".jpg"}
                             title={item.name}
                             population={item.population}
                             terrain={item.terrain}
+                            id={index + 1}
+
                         />
                     </div>
                 ))}

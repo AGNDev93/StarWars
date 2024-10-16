@@ -8,8 +8,8 @@ export const Home = () => (
 	<div className="text-center mt-5">
 		<Characters />
 		<br />
-		<Vehicles />
-		<br />
 		<Planets />
+		<br />
+		<Vehicles />
 	</div>
 );

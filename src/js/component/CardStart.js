@@ -13,7 +13,7 @@ export default function CardStart({ id, image, title, model, manufacturer }) {
                 <p className="card-text">Model: {model}</p>
                 <p className="card-text">Manufacturer: {manufacturer}</p>
                 <div className="d-flex justify-content-between">
-                    <Link to={"/single/" + id} className="btn btn-outline-primary">Learn more!</Link>
+                    {/* <Link to={"/single_startship/" + id} className="btn btn-outline-primary">Learn more!</Link> */}
                     <button className="btn btn-outline-warning" onClick={() => actions.addFavorite(title)}><i className="fas fa-heart" /></button>
                 </div>
             </div>

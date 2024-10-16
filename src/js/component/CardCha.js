@@ -15,7 +15,7 @@ export default function CardCha({ id, image, title, gender, hair_color, eye_colo
                 <p className="card-text">Hair-color: {hair_color}</p>
                 <p className="card-text">Eye-color: {eye_color}</p>
                 <div className="d-flex justify-content-between">
-                    <Link to={"/single/"+id} className="btn btn-outline-primary">Learn more!</Link>
+                    <Link to={"/single_character/" + id} className="btn btn-outline-primary">Learn more!</Link>
                     <button className="btn btn-outline-warning" onClick={() => actions.addFavorite(title)}><i className="fas fa-heart" /></button>
                 </div>
             </div>

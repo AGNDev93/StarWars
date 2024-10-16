@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 export default function CardPlan({ id, image, title, population, terrain }) {
     const { actions, store } = useContext(Context)
-
+    console.log(id)
     return (
         <div className="card" style={{ width: "400px" }}>
             <img src={image} className="card-img-top object-fit-cover" alt="Imágen no funciona desde la API" style={{ width: "400px", height: "200px" }} />
@@ -14,7 +14,7 @@ export default function CardPlan({ id, image, title, population, terrain }) {
                 <p className="card-text">Population: {population}</p>
                 <p className="card-text">Terrain: {terrain}</p>
                 <div className="d-flex justify-content-between">
-                    <Link to={"/single/" + id} className="btn btn-outline-primary">Learn more!</Link>
+                    <Link to={"/single_planet/" + id} className="btn btn-outline-primary">Learn more!</Link>
                     <button className="btn btn-outline-warning" onClick={() => actions.addFavorite(title)}><i className="fas fa-heart" /></button>
                 </div>
             </div>
