@@ -10,6 +10,6 @@ export const Home = () => (
 		<br />
 		<Planets />
 		<br />
-		<Vehicles />
+		{/* <Vehicles /> */}
 	</div>
 );

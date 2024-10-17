@@ -27,7 +27,7 @@ export const SingleCha = props => {
 				<div className="d-flex justify-content-center">
 					<hr className="mt-3" style={{ border: "1px solid red", width: "75%" }} />
 				</div>
-				<div className="d-flex text-center text-danger">
+				<div className="d-flex justify-content-center text-center text-danger">
 					<div className="col-md-2 my-3">
 						<h4>Name</h4>
 						<p>{store.character.name}</p>

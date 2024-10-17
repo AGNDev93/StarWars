@@ -13,12 +13,16 @@ export const SinglePlan = props => {
 	return (
 		<div className="card mb-3 d-flex justify-content-center">
 			<div className="row g-0">
-				<div className="d-flex justify-content-center">
+				<div className="d-flex justify-content-center mt-3">
 					<div className="col-md-4">
-						<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid rounded-start" alt="Character" style={{ width: "800px", heigh: "600px" }} />
+						{params.theid == 1 ?
+							<img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="img-fluid rounded-start" alt={store.planet.name} style={{ width: "800px", heigh: "600px" }} />
+							:
+							<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid rounded-start" alt={store.planet.name} style={{ width: "800px", heigh: "600px" }} />
+						}
 					</div>
-					<div className="col-md-8">
-						<div className="card-body d-flex justify-content-center">
+					<div className="col-md-5">
+						<div className="card-body text-center">
 							<h5 className="card-title">{store.planet.name}</h5>
 							<p className="card-text">Purus luctus auctor curae mi aliquet lacus magna hac fringilla penatibus, inceptos posuere ullamcorper facilisis potenti urna diam platea primis parturient, mauris nostra iaculis taciti condimentum maecenas tempus eget nullam. Orci eros porttitor tempus lobortis conubia vel, eget congue cum ultrices etiam lacus, nullam nisi gravida mauris varius.</p>
 						</div>
@@ -56,7 +60,6 @@ export const SinglePlan = props => {
 				<hr className="mt-3" style={{ border: "1px solid black", width: "100%" }} />
 			</div>
 		</div>
-
 	);
 };
 SinglePlan.propTypes = {
