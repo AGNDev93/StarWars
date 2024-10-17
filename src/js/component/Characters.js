@@ -12,7 +12,7 @@ const Characters = () => {
     console.log(store.characters)
     return (
         <div>
-            <h1>Characters</h1>
+            <h1 className="text-danger d-flex flex-start mb-4">Characters</h1>
             <div className="d-flex flex-row overflow-scroll">
                 {store.characters.map((item, index) => (
                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>

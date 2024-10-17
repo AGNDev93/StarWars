@@ -7,20 +7,20 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light">
 			<Link to="/">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKHNJI8TwkF46elZovdH7hO65b-qTTG1pB7A&s" className="navbar-brand mb-0 img-fluid" style={{ width: '70px', height: 'auto' }} />
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKHNJI8TwkF46elZovdH7hO65b-qTTG1pB7A&s" className="navbar-brand mb-0 img-fluid ms-5" style={{ width: '70px', height: 'auto' }} />
 			</Link>
 			<div>
 				<div className="dropdown">
-					<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorites {store.favorites.length}
+					<button className="btn btn-primary dropdown-toggle me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Favorites <span className="bg-secondary ps-1 pe-1">{store.favorites.length}</span>
 					</button>
 					<ul className="dropdown-menu dropdown-menu-end p-1">
 						{store.favorites.length == 0 ?
-							<li>Empty</li>
+							<li className="text-center">(empty)</li>
 							:
 							store.favorites.map((item) => (
 								<li key={item}><a className="dropdown-item" href="#"></a> {item}
-									<span className="bg-secondary" onClick={() => { actions.deleteFavorite(item) }}><i className="fas fa-trash float-end"> </i></span>
+									<span onClick={() => { actions.deleteFavorite(item) }}><i className="fas fa-trash float-end"> </i></span>
 								</li>
 							))
 						}
