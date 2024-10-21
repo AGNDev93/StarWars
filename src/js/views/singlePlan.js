@@ -33,27 +33,27 @@ export const SinglePlan = props => {
 				</div>
 				<div className="d-flex text-center text-danger">
 					<div className="col-md-2 my-3">
-						<h4>Name</h4>
+						<h6>Name</h6>
 						<p>{store.planet.name}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Climate</h4>
+						<h6>Climate</h6>
 						<p>{store.planet.climate}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Population</h4>
+						<h6>Population</h6>
 						<p>{store.planet.population}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Orbital Period</h4>
+						<h6>Orbital Period</h6>
 						<p>{store.planet.orbital_period}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Rotation Period</h4>
+						<h6>Rotation Period</h6>
 						<p>{store.planet.rotation_period}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Diameter</h4>
+						<h6>Diameter</h6>
 						<p>{store.planet.diameter}</p>
 					</div>
 				</div>

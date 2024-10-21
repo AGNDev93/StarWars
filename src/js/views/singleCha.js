@@ -29,34 +29,33 @@ export const SingleCha = props => {
 				</div>
 				<div className="d-flex justify-content-center text-center text-danger">
 					<div className="col-md-2 my-3">
-						<h4>Name</h4>
+						<h6>Name</h6>
 						<p>{store.character.name}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Birth Year</h4>
+						<h6>Birth Year</h6>
 						<p>{store.character.birth_year}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Gender</h4>
+						<h6>Gender</h6>
 						<p>{store.character.gender}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Height</h4>
+						<h6>Height</h6>
 						<p>{store.character.height}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Skin Color</h4>
+						<h6>Skin Color</h6>
 						<p>{store.character.skin_color}</p>
 					</div>
 					<div className="col-md-2 my-3">
-						<h4>Eye Color</h4>
+						<h6>Eye Color</h6>
 						<p>{store.character.eye_color}</p>
 					</div>
 				</div>
 			</div>
 			<hr className="mt-3" style={{ border: "1px solid black", width: "100%" }} />
 		</div>
-
 	);
 };
 SingleCha.propTypes = {

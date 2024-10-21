@@ -29,27 +29,27 @@ export const SingleStart = props => {
                 </div>
                 <div className="d-flex text-center text-danger">
                     <div className="col-md-2 my-3">
-                        <h4>Name</h4>
+                        <h6>Name</h6>
                         <p>{store.vehicle.name}</p>
                     </div>
                     <div className="col-md-2 my-3">
-                        <h4>Model</h4>
+                        <h6>Model</h6>
                         <p>{store.vehicle.model}</p>
                     </div>
                     <div className="col-md-2 my-3">
-                        <h4>Manufacturer</h4>
+                        <h6>Manufacturer</h6>
                         <p>{store.vehicle.manufacturer}</p>
                     </div>
                     <div className="col-md-2 my-3">
-                        <h4>Cost in Credits</h4>
+                        <h6>Cost in Credits</h6>
                         <p>{store.vehicle.cost_in_credits}</p>
                     </div>
                     <div className="col-md-2 my-3">
-                        <h4>length</h4>
+                        <h6>length</h6>
                         <p>{store.vehicle.length}</p>
                     </div>
                     <div className="col-md-2 my-3">
-                        <h4>Max Atmosphering Speed</h4>
+                        <h6>Max Atmosphering Speed</h6>
                         <p>{store.vehicle.max_atmosphering_speed}</p>
                     </div>
                 </div>

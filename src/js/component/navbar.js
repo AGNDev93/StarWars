@@ -14,7 +14,7 @@ export const Navbar = () => {
 					<button className="btn btn-primary dropdown-toggle me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites <span className="bg-secondary ps-1 pe-1">{store.favorites.length}</span>
 					</button>
-					<ul className="dropdown-menu dropdown-menu-end p-1">
+					<ul className="dropdown-menu">
 						{store.favorites.length == 0 ?
 							<li className="text-center">(empty)</li>
 							:
