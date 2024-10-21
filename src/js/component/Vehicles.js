@@ -7,15 +7,15 @@ const Vehicles = () => {
     const { actions, store } = useContext(Context)
     let images = [
         "https://static.wikia.nocookie.net/starwars/images/3/38/Corvette_negvv.png/revision/latest?cb=20170410043658",
-        "",
-        "",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4XqMOtohI5FwNKGedzFnqSaua9kICsyAbw&s",
+        "https://i.redd.it/2cr0elw3eha51.jpg",
         "https://starwars-visualguide.com/assets/img/vehicles/4.jpg",
-        "",
+        "https://static.wikia.nocookie.net/starwars/images/5/52/Millennium_Falcon_Fathead_TROS.png/revision/latest?cb=20221029015218",
         "https://starwars-visualguide.com/assets/img/vehicles/6.jpg",
         "https://starwars-visualguide.com/assets/img/vehicles/7.jpg",
         "https://starwars-visualguide.com/assets/img/vehicles/8.jpg",
-        "",
-        ""
+        "https://static.wikia.nocookie.net/starwars/images/c/c0/ExecutorShuttle-ESB.jpg/revision/latest?cb=20120110005334",
+        "https://i.etsystatic.com/10854630/r/il/3be46e/3269877296/il_570xN.3269877296_30he.jpg"
     ]
 
 
@@ -33,7 +33,7 @@ const Vehicles = () => {
                             image={images[index]}
                             title={item.name}
                             model={item.model}
-                            manufacturer={item.manufacturer}
+                            length={item.length}
                             id={index + 1}
                         />
                     </div>

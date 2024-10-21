@@ -15,7 +15,7 @@ export const SingleCha = props => {
 			<div className="row g-0">
 				<div className="d-flex justify-content-center">
 					<div className="col-md-4">
-						<img src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} className="img-fluid rounded-start" alt="Character" style={{ width: "800px", heigh: "600px" }} />
+						<img src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} className="img-fluid rounded-start" alt="Character" style={{ width: "800px", height: "50%" }} />
 					</div>
 					<div className="col-md-5">
 						<div className="card-body text-center">
