@@ -1,11 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 
 export default function CardPlan({ id, image, title, population, terrain }) {
     const { actions, store } = useContext(Context)
-    console.log(id)
+      /* State to change heart*/
+      const [isFavorite, setIsFavorite] = useState(false);
+      /* Here start to change heart*/
+      useEffect(() => {
+          setIsFavorite(store.favorites.includes(title));
+      }, [store.favorites, title]);
+  
+      const toggleFavorite = () => {
+          actions.addFavorite(title); // Maneja la adición y eliminación
+          setIsFavorite(prev => !prev); // Actualiza el estado del corazón
+      };
+  
+      /*Here finish to change heart*/
     return (
         <div className="card pb-2" style={{ width: "16rem", height: "19rem" }}>
             <img src={image} className="card-img-top object-fit-cover img-fluid" alt="Imágen no funciona desde la API" style={{ height: "47%" }} />
@@ -16,7 +28,7 @@ export default function CardPlan({ id, image, title, population, terrain }) {
             </div>
             <div className="d-flex justify-content-between ps-3 pe-3">
                 <Link to={"/single_planet/" + id} className="btn btn-outline-primary">Learn more!</Link>
-                <button className="btn btn-outline-warning" onClick={() => actions.addFavorite(title)}><i className="fa-regular fa-heart"></i></button>
+                <button className="btn btn-outline-warning" onClick={toggleFavorite}><i className={`fa-heart ${isFavorite ? 'fa-solid' : 'fa-regular'}`} style={{ color: isFavorite ? 'yellow' : 'inherit' }}></i></button>
             </div>
         </div>
     )

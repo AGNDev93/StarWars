@@ -11,51 +11,57 @@ export const SingleStart = props => {
         actions.getVehicle(params.theid)
     }, [])
     return (
-        <div className="card mb-3 d-flex justify-content-center">
-            <div className="row g-0">
+        <div className="container d-flex justify-content-between">
+            <div className="row g-0" >
                 <div className="d-flex justify-content-center">
-                    <div className="col-md-4">
-                        <img src={`https://starwars-visualguide.com/assets/img/starships/${params.theid}.jpg`} className="img-fluid rounded-start" alt="Character" style={{ width: "800px", heigh: "600px" }} />
+                    <div className="col-md-5 d-flex justify-content-center">
+                        <img src={`https://starwars-visualguide.com/assets/img/starships/${params.theid}.jpg`} className="img-fluid rounded-start"
+                            alt="Vehicle" style={{ width: "460px", height: "300px" }} />
                     </div>
-                    <div className="col-md-8">
-                        <div className="card-body text-center">
-                            <h5 className="card-title">{store.vehicle.name}</h5>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit himenaeos luctus magna sociis, eget nec integer vivamus sociosqu nunc est felis enim. Quisque quis erat enim velit aliquet dictumst porttitor fusce potenti mauris, convallis dui sagittis lectus inceptos hac pulvinar sollicitudin platea, scelerisque risus tellus nunc nisl sodales feugiat dictum orci. </p>
+                    <div className="col-md-5 ps-4">
+                        <h5 className="card-title text-center">{store.vehicles.name}</h5>
+                        <p className="card-text d-flex text-center">Facilisi suscipit commodo ante praesent cubilia quam aliquet luctus porttitor tempus cursus, turpis magnis pretium dictum montes vehicula et est laoreet rhoncus, ac mi sapien sodales nullam gravida euismod placerat nam convallis. Convallis conubia posuere aenean sollicitudin habitant ad pretium tristique natoque, curae ligula erat pharetra ornare accumsan tortor.</p>
+                    </div>
+                </div>
+                <div>
+                    <div className="d-flex justify-content-center text-center">
+                        <hr style={{ border: "1px solid red", width: "83%" }} />
+                    </div>
+                    <div className="d-flex justify-content-center text-center text-danger">
+                        <div className="col-md-2 my-3">
+                            <h6>Name</h6>
+                            <p>{store.vehicles.name}</p>
+                        </div>
+                        <div className="col-md-2 my-3">
+                            <h6>Birth Year</h6>
+                            <p>{store.vehicles.model}</p>
+                        </div>
+                        <div className="col-md-2 my-3">
+                            <h6>Gender</h6>
+                            <p>{store.vehicles.manufacturer}</p>
+                        </div>
+                        <div className="col-md-2 my-3">
+                            <h6>Height</h6>
+                            <p>{store.vehicles.cost_in_credits}</p>
+                        </div>
+                        <div className="col-md-2 my-3">
+                            <h6>Skin Color</h6>
+                            <p>{store.vehicles.length}</p>
+                        </div>
+                        <div className="col-md-2 my-3">
+                            <h6>Eye Color</h6>
+                            <p>{store.vehicles.max_atmosphering_speed}</p>
                         </div>
                     </div>
-                </div>
-                <div className="d-flex justify-content-center">
-                    <hr className="mt-3" style={{ border: "1px solid red", width: "100%" }} />
-                </div>
-                <div className="d-flex text-center text-danger">
-                    <div className="col-md-2 my-3">
-                        <h6>Name</h6>
-                        <p>{store.vehicle.name}</p>
-                    </div>
-                    <div className="col-md-2 my-3">
-                        <h6>Model</h6>
-                        <p>{store.vehicle.model}</p>
-                    </div>
-                    <div className="col-md-2 my-3">
-                        <h6>Manufacturer</h6>
-                        <p>{store.vehicle.manufacturer}</p>
-                    </div>
-                    <div className="col-md-2 my-3">
-                        <h6>Cost in Credits</h6>
-                        <p>{store.vehicle.cost_in_credits}</p>
-                    </div>
-                    <div className="col-md-2 my-3">
-                        <h6>length</h6>
-                        <p>{store.vehicle.length}</p>
-                    </div>
-                    <div className="col-md-2 my-3">
-                        <h6>Max Atmosphering Speed</h6>
-                        <p>{store.vehicle.max_atmosphering_speed}</p>
+                    <div className="d-flex text-center my-3">
+                        <hr style={{ border: "1px solid black", width: "100%" }} />
                     </div>
                 </div>
             </div>
-            <hr className="mt-3" style={{ border: "1px solid black", width: "100%" }} />
         </div>
+
+
+
     );
 };
 SingleStart.propTypes = {
