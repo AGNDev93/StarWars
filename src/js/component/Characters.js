@@ -1,3 +1,34 @@
+// import React, { useEffect, useContext } from "react";
+// import CardCha from "./CardCha";
+// import { Context } from "../store/appContext"
+
+
+// const Characters = () => {
+//     const { actions, store } = useContext(Context)
+
+
+//     console.log(store.characters)
+//     return (
+//         <div>
+//             <h1 className="text-danger d-flex flex-start mb-4">Characters</h1>
+//             <div className="d-flex flex-row overflow-scroll">
+//                 {store.characters && store.characters.length > 0 && store.characters.map((item, index) => (
+//                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
+//                         <CardCha key={index}
+//                             title={item.name}
+//                             gender={item.gender}
+//                             hair_color={item.hair_color}
+//                             eye_color={item.eye_color}
+//                             id={item.url.split("/")[5]}
+//                         />
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     )
+// }
+// export default Characters
+
 import React, { useEffect, useContext } from "react";
 import CardCha from "./CardCha";
 import { Context } from "../store/appContext"

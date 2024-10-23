@@ -16,11 +16,10 @@ export default function CardPlan({ id, image, title, population, terrain }) {
           actions.addFavorite(title); // Maneja la adición y eliminación
           setIsFavorite(prev => !prev); // Actualiza el estado del corazón
       };
-  
       /*Here finish to change heart*/
     return (
         <div className="card pb-2" style={{ width: "16rem", height: "19rem" }}>
-            <img src={image} className="card-img-top object-fit-cover img-fluid" alt="Imágen no funciona desde la API" style={{ height: "47%" }} />
+            <img src={image} className="card-img-top" alt="Planet" style={{ height: "47%" }} />
             <div className="card-body" style={{ height: "40%" }}>
                 <h6 className="card-title pb-2 d-flex justify-content-start">{title}</h6>
                 <p className="card-text mb-0 d-flex justify-content-start">Population: {population}</p>

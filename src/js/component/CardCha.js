@@ -22,7 +22,7 @@ export default function CardCha({ id, image, title, gender, hair_color, eye_colo
 
     return (
         <div className="card pb-3" style={{ width: "16rem", height: "20rem" }}>
-            <img src={image} className="card-img-top" alt="Imágen no funciona desde la API" style={{ height: "47%" }} />
+            <img src={image} className="card-img-top" alt="Character" style={{ height: "47%" }} />
             <div className="card-body" style={{ height: "40%" }}>
                 <h6 className="card-title pb-2 d-flex justify-content-start">{title}</h6>
                 <p className="card-text mb-0 d-flex justify-content-start">Gender: {gender}</p>
