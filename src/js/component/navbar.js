@@ -19,9 +19,11 @@ export const Navbar = () => {
 							<li className="text-center">(empty)</li>
 							:
 							store.favorites.map((item) => (
-								<li key={item}><a className="dropdown-item" href="#"></a> {item}
-									<span onClick={() => { actions.deleteFavorite(item) }}><i className="fas fa-trash float-end"> </i></span>
-								</li>
+								<div className="container-fluid d-flex justify-content-between align-items-center">
+									<li className="ps-2" key={item}><a className="dropdown-item" href="#"></a> {item}
+									</li>
+									<span onClick={() => { actions.deleteFavorite(item) }}><i className="fas fa-trash pe-2"> </i></span>
+								</div>
 							))
 						}
 					</ul>
