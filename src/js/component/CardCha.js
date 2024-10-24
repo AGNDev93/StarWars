@@ -6,20 +6,14 @@ import { Context } from "../store/appContext";
 
 export default function CardCha({ id, image, title, gender, hair_color, eye_color }) {
     const { actions, store } = useContext(Context)
-    /* State to change heart*/
     const [isFavorite, setIsFavorite] = useState(false);
-    /* Here start to change heart*/
     useEffect(() => {
         setIsFavorite(store.favorites.includes(title));
     }, [store.favorites, title]);
-
     const toggleFavorite = () => {
-        actions.addFavorite(title); // Maneja la adición y eliminación
-        setIsFavorite(prev => !prev); // Actualiza el estado del corazón
+        actions.addFavorite(title);
+        setIsFavorite(prev => !prev);
     };
-
-    /*Here finish to change heart*/
-
     return (
         <div className="card pb-3" style={{ width: "16rem", height: "20rem" }}>
             <img src={image} className="card-img-top" alt="Character" style={{ height: "47%" }} />

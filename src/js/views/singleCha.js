@@ -6,7 +6,6 @@ import { Context } from "../store/appContext";
 export const SingleCha = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-
 	useEffect(() => {
 		actions.getCharacter(params.theid)
 	}, [])
@@ -59,8 +58,6 @@ export const SingleCha = props => {
 				</div>
 			</div>
 		</div>
-
-
 	);
 };
 SingleCha.propTypes = {

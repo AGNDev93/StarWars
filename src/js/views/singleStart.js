@@ -7,7 +7,6 @@ export const SingleStart = props => {
     const { store, actions } = useContext(Context);
     const [currentVehicle, setCurrentVehicle] = useState({})
     const params = useParams();
-
     useEffect(() => {
         if (store.vehicles) {
             if (store.vehicles.length > 0 && params.theid) {
