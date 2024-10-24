@@ -9,11 +9,12 @@ export const SingleStart = props => {
     const params = useParams();
 
     useEffect(() => {
-        if (store.vehicle) {
-            if (store.vehicle.length > 0 && params.theid) {
-                const result = store.vehicle.find(item => item.url.split("/")[5] == params.theid)
+        if (store.vehicles) {
+            if (store.vehicles.length > 0 && params.theid) {
+                const result = store.vehicles.find(item => item.url.split("/")[5] == params.theid)
                 if (result) {
                     setCurrentVehicle(result)
+                    console.log(result)
                 }
             }
         }
