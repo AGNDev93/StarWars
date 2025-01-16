@@ -13,7 +13,6 @@ export const SingleStart = props => {
                 const result = store.vehicles.find(item => item.url.split("/")[5] == params.theid)
                 if (result) {
                     setCurrentVehicle(result)
-                    console.log(result)
                 }
             }
         }

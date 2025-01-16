@@ -19,7 +19,8 @@ export const SingleCha = props => {
 					</div>
 					<div className="col-md-5 ps-4">
 						<h5 className="card-title text-center">{store.character.name}</h5>
-						<p className="card-text d-flex text-center">Facilisi suscipit commodo ante praesent cubilia quam aliquet luctus porttitor tempus cursus, turpis magnis pretium dictum montes vehicula et est laoreet rhoncus, ac mi sapien sodales nullam gravida euismod placerat nam convallis. Convallis conubia posuere aenean sollicitudin habitant ad pretium tristique natoque, curae ligula erat pharetra ornare accumsan tortor.</p>
+						{/* <p className="card-text d-flex text-center">Facilisi suscipit commodo ante praesent cubilia quam aliquet luctus porttitor tempus cursus, turpis magnis pretium dictum montes vehicula et est laoreet rhoncus, ac mi sapien sodales nullam gravida euismod placerat nam convallis. Convallis conubia posuere aenean sollicitudin habitant ad pretium tristique natoque, curae ligula erat pharetra ornare accumsan tortor.</p> */}
+						<p className="card-text d-flex text-center">{store.character.name}, {store.character.gender}, was born in the year {store.character.birth_year}</p>
 					</div>
 				</div>
 				<div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 
-export default function CardStart({ id, title, model, length }) {
+export default function CardStart({id, title, model, length }) {
     const { actions, store } = useContext(Context)
     const [isFavorite, setIsFavorite] = useState(false);
     useEffect(() => {

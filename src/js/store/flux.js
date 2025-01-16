@@ -1,6 +1,3 @@
-import { element } from "prop-types";
-
-
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -13,10 +10,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehicle: {}
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
 			getCharacters: async () => {
 				try {
-					const response = await fetch("https://swapi.dev/api/people")
+					const response = await fetch("https://swapi.dev/api/people/")
 					const data = await response.json()
 					console.log(data.results)
 					setStore({ characters: data.results })
@@ -77,33 +73,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getCharacter: async (id) => {
 				try {
-					const response = await fetch("https://swapi.dev/api/people/" + id)
-					const data = await response.json()
-					setStore({ character: data })
+					const response = await fetch("https://swapi.dev/api/people/" + id);
+					const data = await response.json();
+
+					if (data) {
+						setStore({ character: data });
+					} else {
+						console.error("No se encontró información del personaje.");
+					}
 				} catch (error) {
-					console.log(error)
+					console.log("Error en getCharacter:", error);
 				}
 			},
 
 			getPlanet: async (id) => {
 				try {
-					const response = await fetch("https://swapi.dev/api/planets/" + id)
-					const data = await response.json()
-					setStore({ planet: data })
+					const response = await fetch("https://swapi.tech/api/planets/" + id);
+					const data = await response.json();
+
+					if (data.result) {
+						setStore({ planet: data.result.properties });
+					} else {
+						console.error("No se encontró información del planeta.");
+					}
 				} catch (error) {
-					console.log(error)
+					console.log("Error en getPlanet:", error);
 				}
 			},
 
 			getVehicle: async (id) => {
 				try {
-					const response = await fetch("https://swapi.dev/api/vehicles/" + id)
-					const data = await response.json()
-					setStore({ vehicle: data })
+					const response = await fetch("https://swapi.tech/api/vehicles/" + id);
+					const data = await response.json();
+
+					if (data.result) {
+						setStore({ vehicle: data.result.properties });
+					} else {
+						console.error("No se encontró información del vehículo.");
+					}
 				} catch (error) {
-					console.log(error)
+					console.log("Error en getVehicle:", error);
 				}
-			},
+			}
+
 		}
 	};
 };
