@@ -11,8 +11,8 @@ const Planets = () => {
     console.log(store.planets)
     return (
         <div>
-            <h1 className="text-danger d-flex flex-start mb-4">Planets</h1>
-            <div className="d-flex flex-row overflow-scroll">
+            <h1 className="d-flex flex-start mb-4 ms-5 pt-3" style={{color:"#F5F5DC"}}>Planets</h1>
+            <div className="d-flex flex-row overflow-scroll ms-5 me-5">
                 {store.planets.map((item, index) => (
                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
                         <CardPlan key={index}

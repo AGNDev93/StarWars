@@ -15,7 +15,7 @@ export default function CardCha({ id, image, title, gender, hair_color, eye_colo
         setIsFavorite(prev => !prev);
     };
     return (
-        <div className="card pb-5 mt-3" style={{ width: "16rem", height: "20rem" }}>
+        <div className="card pb-4 mt-3" style={{ width: "16rem", height: "20rem" }}>
             <img src={image} className="card-img-top" alt="Character" style={{ height: "47%" }} />
             <div className="card-body" style={{ height: "40%" }}>
                 <h6 className="card-title pb-2 d-flex justify-content-start">{title}</h6>

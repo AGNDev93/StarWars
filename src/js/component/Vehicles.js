@@ -10,9 +10,9 @@ const Vehicles = () => {
     }, [])
     console.log(store.vehicles)
     return (
-        <div>
-            <h1 className="text-danger d-flex flex-start mb-4">Vehicles</h1>
-            <div className="d-flex flex-row overflow-scroll">
+        <div style={{ paddingBottom: "70px" }}>
+            <h1 className="d-flex flex-start mb-4 ms-5 pt-3" style={{color:"#F5F5DC"}}>Vehicles</h1>
+            <div className="d-flex flex-row overflow-scroll ms-5 me-5">
                 {store.vehicles.map((item, index) => (
                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
                         <CardStart key={index}

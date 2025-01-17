@@ -11,7 +11,7 @@ const Characters = () => {
     console.log(store.characters)
     return (
         <div>
-            <h1 className="text-danger d-flex flex-start mb-4 ms-5 pt-5">Characters</h1>
+            <h1 className="d-flex flex-start mb-4 ms-5 pt-5" style={{ color: "#F5F5DC" }}>Characters</h1>
             <div className="d-flex flex-row overflow-scroll ms-5 me-5">
                 {store.characters.map((item, index) => (
                     <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
