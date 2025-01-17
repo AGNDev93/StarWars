@@ -5,7 +5,7 @@ import Vehicles from "../component/Vehicles";
 import Planets from "../component/Planets";
 
 export const Home = () => (
-	<div className="text-center mt-3 ms-5 me-5">
+	<div className="text-center" style={{backgroundImage: 'url("https://img.freepik.com/vector-gratis/fondo-movil-galaxia-tonos-azules-purpura_79603-549.jpg?semt=ais_incoming")', backgroundSize: "cover"}}>
 		<Characters />
 		<br />
 		<Planets />
