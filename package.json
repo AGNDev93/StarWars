@@ -75,6 +75,7 @@
 	},
 	"dependencies": {
 		"@react-three/fiber": "^8.17.12",
+		"framer-motion": "^11.18.1",
 		"prop-types": "^15.7.2",
 		"query-string": "^7.0.1",
 		"react": "^18.2.0",
