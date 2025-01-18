@@ -14,7 +14,7 @@ export default function CardStart({ id, title, model, length }) {
         setIsFavorite(prev => !prev);
     };
     return (
-        <div className="card pb-2 mt-3" style={{ width: "16rem", height: "20rem" }}>
+        <div className="card pb-2 mt-3" style={{ width: "16rem", height: "20rem", border: "4px solid #800080" }}>
             <img src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} className="card-img-top img-fluid" alt="Vehicle" style={{ height: "47%" }} />
             <div className="card-body" style={{ height: "40%" }}>
                 <h6 className="card-title d-flex justify-content-start pb-2">{title}</h6>

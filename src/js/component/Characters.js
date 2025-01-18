@@ -17,7 +17,7 @@ const Characters = () => {
                 {store.characters.map((item, index) => (
                     <motion.div
                         key={index}
-                        style={{ display: 'inline-block', marginRight: '25px' }}
+                        style={{ display: 'inline-block', marginRight: '25px'}}
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     >

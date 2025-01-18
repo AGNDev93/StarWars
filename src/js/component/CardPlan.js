@@ -14,7 +14,7 @@ export default function CardPlan({ id, image, title, population, terrain }) {
         setIsFavorite(prev => !prev);
     };
     return (
-        <div className="card pb-2 mt-3" style={{ width: "16rem", height: "20rem" }}>
+        <div className="card pb-2 mt-3" style={{ width: "16rem", height: "20rem", border: "4px solid #800080" }}>
             <img src={image} className="card-img-top" alt="Planet" style={{ height: "47%" }} />
             <div className="card-body" style={{ height: "40%" }}>
                 <h6 className="card-title pb-2 d-flex justify-content-start">{title}</h6>
