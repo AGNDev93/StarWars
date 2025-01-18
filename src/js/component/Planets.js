@@ -15,11 +15,10 @@ const Planets = () => {
             <h1 className="d-flex flex-start mb-4 ms-5 pt-3" style={{ color: "#FFF5E1" }}>Planets</h1>
             <div className="d-flex flex-row overflow-scroll ms-5 me-5">
                 {store.planets.map((item, index) => (
-                    // <div key={index} style={{ display: 'inline-block', marginRight: '25px' }}>
                     <motion.div
                         key={index}
                         style={{ display: 'inline-block', marginRight: '25px' }}
-                        animate={{ y: [0, -10, 0] }}  // Movimiento hacia arriba y abajo
+                        animate={{ y: [0, -10, 0] }}  
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     >
                         <CardPlan key={index}
