@@ -15,9 +15,9 @@ export const SinglePlan = props => {
 				<div className="d-flex justify-content-center mt-5">
 					<div className="col-md-5 d-flex justify-content-center">
 						{params.theid == 1 ?
-							<img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="img-fluid rounded-start" alt={store.planet.name} style={{ width: "460px", height: "300px" }} />
+							<img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px"}} />
 							:
-							<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid rounded-start" alt={store.planet.name} style={{ width: "460px", height: "300px" }} />
+							<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px"}} />
 						}
 					</div>
 					<div className="col-md-5 ps-4">

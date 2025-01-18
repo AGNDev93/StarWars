@@ -11,11 +11,11 @@ export const SingleCha = props => {
 	}, [])
 	return (
 		<div className="container d-flex justify-content-between">
-			<div className="row g-0" >
+			<div className="row g-0">
 				<div className="d-flex justify-content-center mt-5">
 					<div className="col-md-5 d-flex justify-content-center">
-						<img src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} className="img-fluid rounded-start"
-							alt="Character" style={{ width: "460px", height: "300px" }} />
+						<img src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} className="img-fluid"
+							alt="Character" style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px" }} />
 					</div>
 					<div className="col-md-5 ps-4">
 						<h5 className="card-title text-center">{store.character.name}</h5>
