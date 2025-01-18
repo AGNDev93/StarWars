@@ -19,22 +19,22 @@ export const SingleStart = props => {
     }, [store.vehicle, params])
     return (
         <div className="container d-flex justify-content-between">
-            <div className="row g-0" >
-                <div className="d-flex justify-content-center">
+            <div className="row g-0">
+                <div className="d-flex justify-content-center mt-5">
                     <div className="col-md-5 d-flex justify-content-center">
                         <img src={`https://starwars-visualguide.com/assets/img/vehicles/${params.theid}.jpg`} className="img-fluid rounded-start"
                             alt="Vehicle" style={{ width: "460px", height: "300px" }} />
                     </div>
                     <div className="col-md-5 ps-4">
                         <h5 className="card-title text-center">{currentVehicle.name}</h5>
-                        <p className="card-text d-flex text-center">Facilisi suscipit commodo ante praesent cubilia quam aliquet luctus porttitor tempus cursus, turpis magnis pretium dictum montes vehicula et est laoreet rhoncus, ac mi sapien sodales nullam gravida euismod placerat nam convallis. Convallis conubia posuere aenean sollicitudin habitant ad pretium tristique natoque, curae ligula erat pharetra ornare accumsan tortor.</p>
+                        <p className="card-text d-flex text-center">Hello !!, my name's {currentVehicle.name}, model {currentVehicle.model} and manufatured in {currentVehicle.manufacturer}. In addition to that, I've a cost in credits of {currentVehicle.cost_in_credits}, a length of {currentVehicle.length}, max atmosphering speed  of {currentVehicle.max_atmosphering_speed} and I'm here due to I'm part of the Star Wars movie.</p>
                     </div>
                 </div>
                 <div>
-                    <div className="d-flex justify-content-center text-center">
+                    <div className="d-flex justify-content-center text-center mt-4">
                         <hr style={{ border: "1px solid red", width: "83%" }} />
                     </div>
-                    <div className="d-flex justify-content-center text-center text-danger">
+                    <div className="d-flex justify-content-center text-center text-danger mt-3">
                         <div className="col-md-2 my-3">
                             <h6>Name</h6>
                             <p>{currentVehicle.name}</p>
@@ -60,7 +60,7 @@ export const SingleStart = props => {
                             <p>{currentVehicle.max_atmosphering_speed}</p>
                         </div>
                     </div>
-                    <div className="d-flex text-center my-3">
+                    <div className="d-flex text-center my-2 pb-2">
                         <hr style={{ border: "1px solid black", width: "100%" }} />
                     </div>
                 </div>
