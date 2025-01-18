@@ -4,3 +4,11 @@
 .card{
     font-size:12px;
 }
+
+.rotate-img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate-img:hover {
+    transform: rotate(360deg);
+}

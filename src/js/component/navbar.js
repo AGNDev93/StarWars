@@ -7,7 +7,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light" style={{ backgroundColor: "#FFF5E1" }}>
 			<Link to="/">
-				<img src="https://cdn-icons-png.freepik.com/256/2010/2010147.png?ga=GA1.1.625650846.1737131641&semt=ais_hybrid" className="navbar-brand mb-0 img-fluid ms-5" style={{ width: '80px', height: 'auto' }} />
+				<img src="https://cdn-icons-png.freepik.com/256/2010/2010147.png?ga=GA1.1.625650846.1737131641&semt=ais_hybrid" className="navbar-brand mb-0 img-fluid ms-5 rotate-img" style={{ width: '80px', height: 'auto' }} />
 			</Link>
 			<div>
 				<div className="dropdown">
