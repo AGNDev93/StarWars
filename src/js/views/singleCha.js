@@ -15,7 +15,7 @@ export const SingleCha = props => {
 				<div className="d-flex justify-content-center mt-5">
 					<div className="col-md-5 d-flex justify-content-center">
 						<img src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} className="img-fluid"
-							alt="Character" style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px" }} />
+							alt="Character" style={{ width: "460px", height: "300px", border: "7px solid #800080", borderRadius: "20px" }} />
 					</div>
 					<div className="col-md-5 ps-4">
 						<h5 className="card-title text-center">{store.character.name}</h5>
@@ -24,7 +24,7 @@ export const SingleCha = props => {
 				</div>
 				<div>
 					<div className="d-flex justify-content-center text-center mt-4">
-						<hr style={{ border: "1px solid red", width: "83%" }} />
+						<hr style={{ border: "3px solid blue", width: "83%" }} />
 					</div>
 					<div className="d-flex justify-content-center text-center text-danger mt-3">
 						<div className="col-md-2 my-3">
@@ -53,7 +53,7 @@ export const SingleCha = props => {
 						</div>
 					</div>
 					<div className="d-flex text-center my-2 pb-2">
-						<hr style={{ border: "1px solid black", width: "100%" }} />
+						<hr style={{ border: "3px solid blue", width: "100%" }} />
 					</div>
 				</div>
 			</div>

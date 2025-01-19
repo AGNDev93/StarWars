@@ -15,9 +15,9 @@ export const SinglePlan = props => {
 				<div className="d-flex justify-content-center mt-5">
 					<div className="col-md-5 d-flex justify-content-center">
 						{params.theid == 1 ?
-							<img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px"}} />
+							<img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "7px solid #800080", borderRadius: "20px"}} />
 							:
-							<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "5px solid #800080", borderRadius: "20px"}} />
+							<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "7px solid #800080", borderRadius: "20px"}} />
 						}
 					</div>
 					<div className="col-md-5 ps-4">
@@ -27,7 +27,7 @@ export const SinglePlan = props => {
 				</div>
 				<div>
 					<div className="d-flex justify-content-center text-center mt-4">
-						<hr style={{ border: "1px solid red", width: "83%" }} />
+						<hr style={{ border: "3px solid blue", width: "83%" }} />
 					</div>
 					<div className="d-flex justify-content-center text-center text-danger mt-3">
 						<div className="col-md-2 my-3">
@@ -56,7 +56,7 @@ export const SinglePlan = props => {
 						</div>
 					</div>
 					<div className="d-flex text-center my-2 pb-2">
-						<hr style={{ border: "1px solid black", width: "100%" }} />
+						<hr style={{ border: "3px solid blue", width: "100%" }} />
 					</div>
 				</div>
 			</div>
