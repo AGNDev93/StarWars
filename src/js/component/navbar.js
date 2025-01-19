@@ -11,8 +11,8 @@ export const Navbar = () => {
 			</Link>
 			<div>
 				<div className="dropdown">
-					<button className="dropdown-toggle me-5 p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#ADD8E6", borderRadius: "50px 0% 0% 50px", border: "2px solid #77DD77", fontSize: "20px", color: "#800080" }}><i><b>Favorites</b> </i>
-						<span className="bg-white ps-1 pe-1" style={{ borderRadius: "20px", fontSize: "17px" }}><b>{store.favorites.length}</b></span>
+					<button className="dropdown-toggle me-5 p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "white", borderRadius: "50px 0% 0% 50px", border: "5px solid #B2FFFF", fontSize: "20px", color: "#800080" }}><i><b>Favorites</b> </i>
+						<span className="text-white ps-1 pe-1" style={{ borderRadius: "20px", fontSize: "17px", backgroundColor: "#B2FFFF"}}><b>{store.favorites.length}</b></span>
 					</button>
 					<ul className="dropdown-menu">
 						{store.favorites.length == 0 ?
