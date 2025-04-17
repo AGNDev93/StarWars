@@ -15,7 +15,7 @@ export const SinglePlan = props => {
 				<div className="d-flex justify-content-center mt-5">
 					<div className="col-md-5 d-flex justify-content-center">
 						
-							<img src={"https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg"} className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "7px solid #800080", borderRadius: "20px"}} />
+							<img src={"https://preview.redd.it/fjsz8h2q8yv41.jpg?width=1080&crop=smart&auto=webp&s=89b3b10c30587400976c54fd64f06b870fa8f240"} className="img-fluid" alt={store.planet.name} style={{ width: "460px", height: "300px", border: "7px solid #800080", borderRadius: "20px"}} />
 						
 					</div>
 					<div className="col-md-5 ps-4">

@@ -22,7 +22,7 @@ const Planets = () => {
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     >
                         <CardPlan key={index}
-                            image={"https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg"}
+                            image={"https://preview.redd.it/fjsz8h2q8yv41.jpg?width=1080&crop=smart&auto=webp&s=89b3b10c30587400976c54fd64f06b870fa8f240"}
                             title={item.name}
                             population={item.population}
                             terrain={item.terrain}
