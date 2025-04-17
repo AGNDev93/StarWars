@@ -26,6 +26,7 @@ const Vehicles = () => {
                             model={item.model}
                             length={item.length}
                             id={item.url.split("/")[5]}
+                            image={"https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg"}
                         />
                     </motion.div>
                 ))}

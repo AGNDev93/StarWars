@@ -12,10 +12,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getCharacters: async () => {
 				try {
-					const response = await fetch("https://swapi.dev/api/people/")
+					const response = await fetch("https://www.swapi.tech/api/people/")
 					const data = await response.json()
+					const characterList = await Promise.all(
+						data.results.map(char => fetch(char.url).then(res => res.json()).then(resData => resData.result.properties))
+					)
 					console.log(data.results)
-					setStore({ characters: data.results })
+					setStore({ characters: characterList })
 				} catch (error) {
 					console.log(error)
 				}
@@ -23,10 +26,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getVehicles: async () => {
 				try {
-					const response = await fetch("https://swapi.dev/api/vehicles")
+					const response = await fetch("https://www.swapi.tech/api/vehicles")
 					const data = await response.json()
+					const vehicleList = await Promise.all(
+						data.results.map(char => fetch(char.url).then(res => res.json()).then(resData => resData.result.properties))
+					)
 					console.log(data.results)
-					setStore({ vehicles: data.results })
+					setStore({ vehicles: vehicleList })
 				} catch (error) {
 					console.log(error)
 				}
@@ -34,10 +40,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getPlanets: async () => {
 				try {
-					const response = await fetch("https://swapi.dev/api/planets")
+					const response = await fetch("https://www.swapi.tech/api/planets")
 					const data = await response.json()
+					const planetList = await Promise.all(
+						data.results.map(char => fetch(char.url).then(res => res.json()).then(resData => resData.result.properties))
+					)
 					console.log(data.results)
-					setStore({ planets: data.results })
+					setStore({ planets: planetList })
 				} catch (error) {
 					console.log(error)
 				}
@@ -73,11 +82,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getCharacter: async (id) => {
 				try {
-					const response = await fetch("https://swapi.dev/api/people/" + id);
+					const response = await fetch("https://www.swapi.tech/api/people/" + id);
 					const data = await response.json();
 
 					if (data) {
-						setStore({ character: data });
+						setStore({ character: data.result.properties });
 					} else {
 						console.error("No se encontró información del personaje.");
 					}
@@ -88,7 +97,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getPlanet: async (id) => {
 				try {
-					const response = await fetch("https://swapi.tech/api/planets/" + id);
+					const response = await fetch("https://www.swapi.tech/api/planets/" + id);
 					const data = await response.json();
 
 					if (data.result) {
@@ -103,7 +112,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getVehicle: async (id) => {
 				try {
-					const response = await fetch("https://swapi.tech/api/vehicles/" + id);
+					const response = await fetch("https://www.swapi.tech/api/vehicles/" + id);
 					const data = await response.json();
 
 					if (data.result) {

@@ -22,7 +22,7 @@ const Characters = () => {
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     >
                         <CardCha key={index}
-                            image={"https://starwars-visualguide.com/assets/img/characters/" + (index + 1) + ".jpg"}
+                            image={"https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg"}
                             title={item.name}
                             gender={item.gender}
                             hair_color={item.hair_color}
